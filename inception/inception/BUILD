@@ -160,6 +160,14 @@ sh_binary(
 )
 
 sh_binary(
+    name = "preprocess_plantvillage",
+    srcs = ["data/preprocess_plantvillage.sh"],
+    data = [
+        ":build_image_data",
+    ],
+)
+
+sh_binary(
     name = "download_and_preprocess_imagenet",
     srcs = ["data/download_and_preprocess_imagenet.sh"],
     data = [
